@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>可折叠块</title>
+    <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.4.5.min.css">
+    <script src="jquerymobile/jquery-1.12.2.js"></script>
+    <script src="jQueryMobile/jquery.mobile-1.4.5.js"></script>
+    <style>
+        ul{
+            list-style: none;
+
+        }
+        li{
+            width: 100%;
+            margin-left: 0px;
+        }
+    </style>
+</head>
+<body>
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>可折叠块</h1>
+    </div>
+
+    <div data-role="content">
+
+        <ul>
+            <li data-role="collapsible">
+                <h1>点击我 - 我可以折叠！</h1>
+                <p>我是可折叠的内容。</p>
+            </li>
+            <li data-role="collapsible">
+                <h1>点击我 - 我可以折叠！</h1>
+                <p>我是可折叠的内容。</p>
+            </li>
+            <li data-role="collapsible">
+                <h1>点击我 - 我可以折叠！</h1>
+                <p>我是可折叠的内容。</p>
+            </li>
+        </ul>
+        <div data-role="collapsible-set" data-inset="false">
+            <!--改变图标-->
+            <div data-role="collapsible" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u">
+                <h1>点击我 - 我可以折叠！</h1>
+                <p>我是被展开的内容。</p>
+            </div>
+            <div data-role="collapsible" data-collapsed-icon="" data-expanded-icon="">
+                <h1>点击我 - 我可以折叠！</h1>
+                <p>我是被展开的内容。</p>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="footer">
+        <h1>页脚文本</h1>
+    </div>
+</div>
+</body>
+</html>

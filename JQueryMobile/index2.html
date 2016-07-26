@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>页面过渡和按钮组</title>
+    <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.4.5.min.css">
+    <script src="jquerymobile/jquery-1.12.2.js"></script>
+    <script src="jQueryMobile/jquery.mobile-1.4.5.js"></script>
+</head>
+<body>
+<div data-role="page" id="pageone">
+
+    <div data-role="header">
+        <h1>欢迎访问我的主页</h1>
+    </div>
+
+    <div data-role="content">
+        <p>按钮</p>
+        <a href="#" data-role="button">按钮</a>
+        <button>按钮</button>
+        <input type="button" value="按钮">
+        <a href="#" data-role="button" data-inline="true">适应内容的按钮</a>
+
+        <div data-role="controlgroup" data-type="horizontal">
+            <a href="#anylink" data-role="button">评论</a>
+            <a href="#anylink" data-role="button">点赞</a>
+            <a href="#anylink" data-role="button">分享</a>
+        </div>
+
+        <div data-role="controlgroup" data-type="vertical">
+            <a href="#anylink" data-role="button">评论</a>
+            <a href="#anylink" data-role="button">点赞</a>
+            <a href="#anylink" data-role="button">分享</a>
+        </div>
+    </div>
+
+    <div data-role="footer">
+        <!--页面过渡滑动-->
+        <a href="#pagetwo" data-transition="slide">第二页</a>
+    </div>
+
+</div>
+
+<div data-role="page" id="pagetwo">
+
+    <div data-role="header">
+        <a href="#" data-role="button" data-rel="back">后退</a>
+        <h1>详情页面</h1>
+    </div>
+
+    <div data-role="content">
+        <a href="#anylink" data-role="button" data-icon="search" data-inline="true">搜索</a>
+        <a href="#anylink" data-role="button" data-icon="search" data-inline="arrow-l">左箭头</a>
+        <!--图标置右-->
+        <a href="#anylink" data-role="button" data-icon="search" data-inline="arrow-l" data-iconpos="right">左箭头</a>
+        <a href="#anylink" data-role="button" data-icon="delete" data-inline="true">删除</a>
+        <!--只有图标-->
+        <a href="#anylink" data-role="button" data-icon="delete" data-inline="true" data-iconpos="notext">删除</a>
+        <!--如需在用户点击（轻触）链接时创建一个对话框，请向该链接添加 data-rel="dialog"：-->
+        <a href="#pagethree" data-rel="dialog">给我留言</a>
+    </div>
+
+    <div data-role="footer">
+        <!--页面过渡滑动反向-->
+        <a href="#pageone" data-transition="slide" data-direction="reverse">首页</a>
+    </div>
+
+</div>
+</body>
+</html>

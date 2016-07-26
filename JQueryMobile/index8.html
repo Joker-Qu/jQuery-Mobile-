@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>表单</title>
+    <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.4.5.min.css">
+    <script src="jquerymobile/jquery-1.12.2.js"></script>
+    <script src="jQueryMobile/jquery.mobile-1.4.5.js"></script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="content">
+        <form method="post" action="demoform.asp">
+            <label for="fname">姓名：</label>
+            <input type="text" name="fname" id="fname">
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+        <form method="post" action="demoform.asp">
+            <label for="fname" class="ui-hidden-accessible">姓名：</label>
+            <input type="text" name="fname" id="fname" placeholder="姓名">
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+        <form method="post" action="demoform.asp">
+            <!--fieldcontain 属性基于页面宽度来设置 label 和表单控件的样式。当页面宽度大于 480px 时，它会自动将 label 与表单控件放置于同一行。当小于 480px 时，label 会被放置于表单元素之上。-->
+            <div data-role="fieldcontain">
+                <label for="fname">First name:</label>
+                <input type="text" name="fname" id="fname">
+                <label for="lname">Last name:</label>
+                <input type="text" name="lname" id="lname">
+            </div>
+        </form>
+        <!--不同的input类型-->
+        <form method="post" action="demoform.asp">
+            <div data-role="fieldcontain">
+                <label for="fullname">全名：</label>
+                <input type="text" name="fullname" id="fullname">
+                <label for="bday">生日：</label>
+                <input type="date" name="bday" id="bday">
+                <label for="email">电邮：</label>
+                <input type="email" name="email" id="email" placeholder="您的邮箱地址..">
+            </div>
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+        <!--textarea 多行输入-->
+        <form method="post" action="demoform.asp">
+            <div data-role="fieldcontain">
+                <label for="info">多行输入:</label>
+                <textarea name="addinfo" id="info"></textarea>
+            </div>
+        </form>
+        <!--搜索框-->
+        <form method="post" action="demoform.asp">
+            <div data-role="fieldcontain">
+                <label for="search">搜索：</label>
+                <input type="search" name="search" id="search" placeholder="搜索内容...">
+            </div>
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+        <!--单选框-->
+        <form method="post" action="demoform.asp">
+            <fieldset data-role="controlgroup">
+                <legend>请选择您的性别：</legend>
+                <label for="male">男性</label>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="female">女性</label>
+                <input type="radio" name="gender" id="female" value="female">
+            </fieldset>
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+        <h1>复选框</h1>
+        <form method="post" action="demoform.asp">
+            <fieldset data-role="controlgroup">
+                <legend>请选择您喜爱的颜色：</legend>
+                <label for="red">红色</label>
+                <input type="checkbox" name="favcolor" id="red" value="red">
+                <label for="green">绿色</label>
+                <input type="checkbox" name="favcolor" id="green" value="green">
+                <label for="blue">蓝色</label>
+                <input type="checkbox" name="favcolor" id="blue" value="blue">
+            </fieldset>
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+        <h1>复选框水平排列</h1>
+        <form method="post" action="demoform.asp">
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <legend>请选择您喜爱的颜色：</legend>
+                <label for="red">红色</label>
+                <input type="checkbox" name="favcolor" id="red" value="red">
+                <label for="green">绿色</label>
+                <input type="checkbox" name="favcolor" id="green" value="green">
+                <label for="blue">蓝色</label>
+                <!--checked 预选-->
+                <input type="checkbox" name="favcolor" id="blue" value="blue" checked>
+            </fieldset>
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+
+            <h1>选择菜单 </h1>
+            <form method="post" action="demoform.asp">
+                <fieldset data-role="fieldcontain">
+                    <label for="day">选择日期</label>
+                    <select name="day" id="day">
+                        <option value="mon">星期一</option>
+                        <option value="tue">星期二</option>
+                        <option value="wed">星期三</option>
+                    </select>
+                </fieldset>
+                <form>
+
+                    <h1>选择菜单 相关组</h1>
+                    <form method="post" action="demoform.asp">
+                        <fieldset data-role="fieldcontain">
+                            <label for="day">选择日期</label>
+                            <select name="day" id="day">
+                                <optgroup label="欧洲">
+                                    <option value="mon">德国</option>
+                                    <option value="tue">意大利</option>
+                                    <option value="wed">英国</option>
+                                    </optgroup>
+                                        <optgroup label="亚洲">
+                                            <option value="mon">中国</option>
+                                            <option value="tue">日本</option>
+                                            <option value="wed">韩国</option>
+                                        </optgroup>
+                            </select>
+                        </fieldset>
+                        <form>
+
+</div>
+</div>
+</body>
+</html>

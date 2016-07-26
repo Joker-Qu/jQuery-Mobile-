@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>事件</title>
+    <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.4.5.min.css">
+    <script src="jQueryMobile/jquery-1.12.2.js"></script>
+    <script src="jQueryMobile/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+        $(document).on("pagebeforecreate",function(event){
+            alert("触发 pagebeforecreate 事件！");
+        });
+        $(document).on("pagecreate",function(event){
+            alert("触发 pagecreate 事件！");
+        });
+        $(document).on("pageinit",function(event){
+            alert("触发 pageinit 事件！")
+        });
+
+        $(document).on("pageload",function(event,data){
+            alert("触发 pageload 事件！\nURL: " + data.url);
+        });
+        $(document).on("pageloadfailed",function(event,data){
+            alert("抱歉，被请求页面不存在。");
+        });
+
+
+//        pageinit事件：pageone页面初始化并完善样式设置后
+        $(document).on("pageinit","#pageone",function(){
+            $("p").on("click",function(){
+                $(this).hide();
+            $(window).on("orientationchange",function(event){
+                var orientation=event.orientation;
+                alert("方向改变为："+orientation)
+                if(orientation==0){//portrait
+                    alert("portrait")
+                }else{//landscape
+                    alert("landscape")
+                }
+            })
+            });
+//            $(document).on("scrollstart",function(){
+//                alert("开始滑动")
+//                });
+//            $(document).on("scrollstop",function(){
+//                alert("结束滚动！");
+//            });
+            $("h1").on("tap",function(){
+
+                    $(this).css("color", "yellow")
+
+            })
+            $("a").on("taphold",function(){
+                $(this).css("background","blue")
+            })
+            $("swipe").on("swipe",function(){
+                $(this).hide()
+            })
+        });
+
+        $(document).on("pagebeforeshow","#pagetwo",function(){ // 当进入页面二时
+            alert("页面二即将显示");
+        });
+        $(document).on("pageshow","#pagetwo",function(){ // 当进入页面二时
+            alert("现在显示页面二");
+        });
+        $(document).on("pagebeforehide","#pagetwo",function(){ // 当离开页面二时
+            alert("页面二即将隐藏");
+        });
+        $(document).on("pagehide","#pagetwo",function(){ // 当离开页面二时
+            alert("现在隐藏页面二");
+        });
+    </script>
+</head>
+<body>
+<div data-role="page" id="pageone">
+
+    <div data-role="header">
+        <h1>欢迎访问我的主页</h1>
+    </div>
+
+    <div data-role="content">
+        <p>如果您点击我，我会消失。</p>
+        <p>点击我，我会消失。</p>
+        <p>点击我，我也会消失。</p>
+        <a href="#anylink" data-role="button">长按变色</a>
+        <p class="swipe">滑动删除</p>
+    </div>
+    <div>
+        <a href="23" data-role="button">无效链接</a>
+        <a href="http://www.baidu.com" data-role="button">百度</a>
+    </div>
+
+    <div>
+
+        <a href="#pagetwo" data-role="button" data-transition="slide">下一页</a>
+    </div>
+    <div data-role="footer">
+        <p>第一页</p>
+    </div>
+
+</div>
+
+<div data-role="page" id="pagetwo">
+
+    <div data-role="header">
+        <h1>欢迎访问我的主页</h1>
+    </div>
+
+    <div data-role="content">
+
+    </div>
+    <div>
+
+        <a href="#pageone" data-role="button">第一页</a>
+    </div>
+
+
+    <div data-role="footer">
+       <p>第二页</p>
+    </div>
+
+</div>
+</body>
+
+</html>

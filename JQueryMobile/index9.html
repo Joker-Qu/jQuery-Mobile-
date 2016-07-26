@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>表单2</title>
+    <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.4.5.min.css">
+    <script src="jquerymobile/jquery-1.12.2.js"></script>
+    <script src="jQueryMobile/jquery.mobile-1.4.5.js"></script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>选择菜单</h1>
+    </div>
+
+    <div data-role="content">
+        <form method="post" action="demoform.asp">
+            <fieldset data-role="fieldcontain">
+                <label for="day">选择天</label>
+                <select name="day" id="day" data-native-menu="false" multiple>
+                    <option value="mon" checked>星期一</option>
+                    <option value="tue">星期二</option>
+                    <option value="wed">星期三</option>
+                    <option value="thu">星期四</option>
+                    <option value="fri">星期五</option>
+                    <option value="sat">星期六</option>
+                    <option value="sun">星期日</option>
+                </select>
+            </fieldset>
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+        <h1>安排会议</h1>
+        <form method="post" action="demoform.asp">
+            <fieldset data-role="controlgroup">
+                <legend>安排会议:</legend>
+                <label for="day">安排会议</label>
+                <select name="day" id="day">
+                    <option value="mon" checked>星期一</option>
+                    <option value="tue">星期二</option>
+                    <option value="wed">星期三</option>
+                    <option value="thu">星期四</option>
+                    <option value="fri">星期五</option>
+                    <option value="sat">星期六</option>
+                    <option value="sun">星期日</option>
+                </select>
+                <label for="day">安排会议</label>
+                <select name="time" id="time">
+                    <option value="mon" checked>8:00</option>
+                    <option value="tue">9:00</option>
+                    <option value="wed">10:00</option>
+                    <option value="thu">11:00</option>
+                    <option value="fri">12:00</option>
+                    <option value="sat">13:00</option>
+                    <option value="sun">14:00</option>
+                </select>
+            </fieldset>
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+        <h1>安排会议水平</h1>
+        <form method="post" action="demoform.asp">
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <legend>安排会议:</legend>
+                <label for="day">安排会议</label>
+                <select name="day" id="day">
+                    <option value="mon" checked>星期一</option>
+                    <option value="tue">星期二</option>
+                    <option value="wed">星期三</option>
+                    <option value="thu">星期四</option>
+                    <option value="fri">星期五</option>
+                    <option value="sat">星期六</option>
+                    <option value="sun">星期日</option>
+                </select>
+                <label for="day">安排会议</label>
+                <select name="time" id="time" data-icon="search">
+                    <option value="mon" checked>8:00</option>
+                    <option value="tue">9:00</option>
+                    <option value="wed">10:00</option>
+                    <option value="thu">11:00</option>
+                    <!--预选-->
+                    <option value="fri" selected>12:00</option>
+                    <option value="sat">13:00</option>
+                    <option value="sun">14:00</option>
+                </select>
+            </fieldset>
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+        <form method="post" action="demoform.asp">
+            <fieldset data-role="collapsible">
+                <legend>填写个人资料</legend>
+                <label for="name">全名：</label>
+                <input type="text" name="text" id="name">
+                <p>喜爱的颜色：</p>
+                <div data-role="controlgroup">
+                    <label for="red">红色</label>
+                    <input type="checkbox" name="favcolor" id="red" value="red">
+                    <label for="green">绿色</label>
+                    <input type="checkbox" name="favcolor" id="green" value="green">
+                    <label for="blue">蓝色</label>
+                    <input type="checkbox" name="favcolor" id="blue" value="blue">
+                </div>
+                <input type="submit" data-inline="true" value="提交">
+            </fieldset>
+        </form>
+        <h1>滑块</h1>
+        <form method="post" action="demoform.asp">
+            <div data-role="fieldcontain">
+                <label for="points">Points:</label>
+                <input type="range" name="points" id="points" value="50" min="0" max="100" data-highlight="true">
+            </div>
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+        <h1>Switch</h1>
+        <form method="post" action="demoform.asp">
+            <div data-role="fieldcontain">
+
+                <label for="switch">切换开关：</label>
+                <select name="switch" id="switch" data-role="slider">
+                    <option value="on">On</option>
+                    <option value="off" selected>Off</option>
+                </select>
+            </div>
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+    </div>
+</div>
+</body>
+</html>

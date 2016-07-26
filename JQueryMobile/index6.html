@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>列布局</title>
+    <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.4.5.min.css">
+    <script src="jquerymobile/jquery-1.12.2.js"></script>
+    <script src="jQueryMobile/jquery.mobile-1.4.5.js"></script>
+</head>
+<style>
+    .ui-block-a,.ui-block-b,.ui-block-c{
+        border: 1px solid black;
+    }
+</style>
+<body>
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>自定义的列</h1>
+    </div>
+
+    <div data-role="content">
+        <p>三列样式布局：</p>
+        <div class="ui-grid-b">
+            <div class="ui-block-a"><span>第一个列</span></div>
+            <div class="ui-block-b"><span>第二个列</span></div>
+            <div class="ui-block-c"><span>第三个列</span></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

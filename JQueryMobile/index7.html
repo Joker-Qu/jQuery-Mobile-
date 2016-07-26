@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>列表</title>
+    <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.4.5.min.css">
+    <script src="jquerymobile/jquery-1.12.2.js"></script>
+    <script src="jQueryMobile/jquery.mobile-1.4.5.js"></script>
+    <style>
+        .imgul img{
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+<h2>无序列表：</h2>
+<ul data-role="listview">
+    <li data-role="list-divider">欧洲</li>
+    <li><a href="#">法国</a></li>
+    <li><a href="#">德国</a></li>
+    <li data-role="list-divider">亚洲</li>
+    <li><a href="#">中国</a></li>
+    <li><a href="#">日本</a></li>
+</ul>
+<h2>我的通讯录</h2>
+<ul data-role="listview" data-autodividers="true" data-filter="true" data-filter-placeholder="搜索姓名">
+    <li><a href="#">Adele</a></li>
+    <li data-icon="search"><a href="#">Agnes</a></li>
+    <li data-icon="delete"><a href="#">Albert</a></li>
+    <li><a href="#">Billy</a></li>
+    <li><a href="#">Bob</a></li>
+    <li><a href="#">Calvin</a></li>
+    <li><a href="#">Cameron</a></li>
+    <li><a href="#">Chloe</a></li>
+    <li><a href="#">Christina</a></li>
+    <li><a href="#">Diana</a></li>
+    <li><a href="#">Gabriel</a></li>
+    <li><a href="#">Glen</a></li>
+    <li><a href="#">Ralph</a></li>
+    <li><a href="#">Valarie</a></li>
+</ul>
+<ul class="imgul" data-role="listview" data-inset="true">
+    <li>
+        <a href="#"><img src="icon.jpeg"><h1>银魂</h1><p>好看</p></a>
+    </li>
+    <li>
+        <a href="#"><img src="icon.jpeg"><h1>银魂</h1><p>好看</p></a>
+    </li>
+</ul>
+<ul data-role="listview">
+    <li><a href="#">Inbox<span class="ui-li-count">335</span></a></li>
+    <li><a href="#">Sent<span class="ui-li-count">123</span></a></li>
+    <li><a href="#">Trash<span class="ui-li-count">7</span></a></li>
+</ul>
+
+    <div data-role="header">
+        <h1>页眉文本</h1>
+    </div>
+
+    <div data-role="content">
+        <h2>我的日历</h2>
+        <ul data-role="listview" data-inset="true">
+            <li data-role="list-divider">星期三, 1 月 2 日, 2013 <span class="ui-li-count">2</span></li>
+            <li><a href="#">
+                <h2>医生</h2>
+                <p><b>To Peter Griffin</b></p>
+                <p>Well, Mr. Griffin, I've looked into physical results.</p>
+                <p>Ah, Mr. Griffin, I'm not quite sure how to say this. Kim Bassinger? Bass singer? Bassinger?</p>
+                <p>But now, onto the cancer</p>
+                <p>You are a Cancer, right? You were born in July? Now onto these test results.</p>
+                <p class="ui-li-aside">Re: Appointment</p></a>
+            </li>
+            <li><a href="#">
+                <h2>Glen Quagmire</h2>
+                <p>Remember me this weekend!</p>
+                <br>
+                <p>- giggity giggity goo</p>
+                <p class="ui-li-aside">Re: Camping</p></a>
+            </li>
+            <li data-role="list-divider">周二, 1 月 1 日, 2013 <span class="ui-li-count">1</span></li>
+            <li><a href="#">
+                <h2>Louis</h2>
+                <p><b>Happy Girl!</b></p>
+                <p>Thank you so much!!</p>
+                <p class="ui-li-aside">Re: Christmas Gifts</p></a>
+            </li>
+        </ul>
+    </div>
+
+    <div data-role="footer">
+        <h1>页脚文本</h1>
+    </div>
+
+
+</body>
+</html>
